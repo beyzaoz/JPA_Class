@@ -10,7 +10,7 @@ import java.util.List;
 public class Category {
 
     @Id
-    @Column(name= " category_id")
+    @Column(name= "category_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -22,7 +22,7 @@ public class Category {
 
     @ManyToMany
     @JoinTable(
-            name = "book_category_id", joinColumns = @JoinColumn(name = "category_id"),
+            name = "book_category", joinColumns = @JoinColumn(name = "category_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id"))
     private List <Book> books;
 
